@@ -1,7 +1,7 @@
 <CsoundSynthesizer>
 <CsOptions>
-;-odac  ;;;realtime audio out
--o shuttlelaunch.wav -W
+-odac  ;;;realtime audio out
+;-o shuttlelaunch.wav -W
 </CsOptions>
 <CsInstruments>
 
@@ -43,7 +43,7 @@ instr myout
 	aleftin inleta "leftin"
 	arightin inleta "rightin"
 	
-	kenv linseg 0.8, 0.1, 1, 18.9, 1, 1, 0
+	kenv linseg 0.8, 0.1, 1, 17.9, 1, 2, 0
 	
 	aoutL = aleftin * (iamp*kenv)
 	aoutR = arightin * (iamp*kenv)
@@ -56,7 +56,7 @@ instr 1
   ; Normalize to +/-1.0
   awhite = awhite - 1.0  
 
-  apink  pinkish awhite, 1, 0, 0, 1
+  apink  pinkish awhite, 1, 0, 29, 0
 
 aoutL = apink
 aoutR = apink
